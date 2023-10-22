@@ -1,0 +1,28 @@
+﻿Example of UseAuthentication withJWT
+
+Rest Client Thunder Client extension vsCode
+
+To Generate the token
+
+curl  -X POST \
+  'https://localhost:7175/WeatherForecast/login' \
+  --header 'Accept: */*' \
+  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
+  --header 'Content-Type: application/json' \
+  --data-raw '{
+  "Id": "111234",
+  "email": "tom@joe.com",
+  "password": "blablabla"
+}'
+
+To Consume the token protected
+
+curl  -X GET \
+  'https://localhost:7175/WeatherForecast' \
+  --header 'Accept: */*' \
+  --header 'User-Agent: Thunder Client (https://www.thunderclient.com)' \
+  --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMTEyMzQiLCJlbWFpbCI6InRvbUBqb2UuY29tIiwiZXhwIjoxNjk4MDU5MjIyLCJpc3MiOiJNeUlzc3VlcyIsImF1ZCI6Ik15QXVkaWVuY2UifQ.hsiRCKM98XhPRhz6nnDps5esIfpIrHlSGxoiH8k2fH0'
+
+
+  https://www.youtube.com/watch?v=4cFhYUK8wnc
+  https://www.youtube.com/watch?v=PlbAuNvR16s
